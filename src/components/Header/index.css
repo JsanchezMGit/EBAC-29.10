@@ -1,0 +1,78 @@
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: normal;
+    align-items: normal;
+    justify-content: center;
+    justify-items: normal;
+    box-sizing: border-box;
+    background-color: #444;
+    width: 100%;
+  }
+  @media screen and (max-width: 750px) {
+    header {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    header .mainsearch {
+      min-width: 300px;
+    }
+  }
+  
+  .search-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: normal;
+    align-items: normal;
+    justify-content: center;
+    justify-items: normal;
+    box-sizing: border-box;
+  }
+  
+  .mainsearch {
+    border-radius: 2rem;
+    min-width: 30rem;
+    min-height: 2rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: 800;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  .menu {
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  .menu-container {
+    margin-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (max-width: 750px) {
+    .menu-container {
+      justify-content: center;
+    }
+  }
+  
+  .logo {
+    cursor: pointer;
+    color: #fff;
+    background-image: url("./img/tvstatic.jpeg");
+    padding: 0.1rem 0.5rem;
+    border-radius: 5px;
+    align-content: center;
+    display: flex;
+    align-items: center;
+  }
+  .logo span {
+    text-shadow: 1px 1px 2px #000;
+  }
+  .logo img {
+    width: 1.5rem;
+    margin-left: 0.5rem;
+  }
