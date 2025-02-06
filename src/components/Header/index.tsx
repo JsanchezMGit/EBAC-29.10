@@ -1,13 +1,10 @@
 
+import { IHeaderProps } from '../../interfaces/HeaderProps';
 import tvLogo from './img/tv.svg';
 import './index.css';
 import { useNavigate } from 'react-router-dom';
 
-interface HeaderProps {
-    searchRequest:Function
-}
-
-const Header = ({searchRequest}:HeaderProps) => {
+const Header = ({searchRequest}:IHeaderProps) => {
 
     const navigate = useNavigate();
 

@@ -1,4 +1,4 @@
-export const formatSummary = (summaryText: string | null) => {
+export const formatSummary = (summaryText: string | null | undefined) => {
     let summary = 'No summary';
     if (summaryText) {
         summary = summaryText

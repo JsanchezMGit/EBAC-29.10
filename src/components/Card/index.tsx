@@ -1,18 +1,10 @@
 import rateIco from './img/start.svg';
 import './index.css';
-import tvstatic from '../Header/img/tvstatic.jpeg'
+import tvstatic from '../Header/img/tvstatic.jpeg';
 import { useNavigate } from 'react-router-dom';
+import { ICardProps } from '../../interfaces/CardProps';
 
-interface CardProps {
-    id: number,
-    name: string,
-    summaryText: string,
-    genres: string[],
-    imageUrl: string,
-    score: number
-}
-
-const Card = ({id, name, summaryText, genres, imageUrl, score}:CardProps) => {
+const Card = ({id, name, summaryText, genres, imageUrl, score}:ICardProps) => {
 
     const navigate = useNavigate();
 
@@ -35,7 +27,7 @@ const Card = ({id, name, summaryText, genres, imageUrl, score}:CardProps) => {
         <article className='tv-item' onMouseEnter={handleCardMouseEnter} onMouseLeave={handleCardMouseLeave}>
             <div className='tv-item-summary'>
                 <p>{summaryText}</p>
-                <ul>{genres.map(c => <li>{c}</li>)}</ul>
+                <ul>{genres?.map(c => <li>{c}</li>)}</ul>
                 <button className='tv-item-link' data-id={id} onClick={handleCardClick}>Ver mas detalles</button>
             </div>
             <img className='tv-item-image' src={imageUrl ?? tvstatic} alt={`Portada de ${name}`} />
